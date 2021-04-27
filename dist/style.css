@@ -24,6 +24,36 @@ header {
   height: 100vh;
   background-color: #111117;
 }
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #7c8ea0;
+}
+header nav h2 {
+  font-family: "Montserrat", sans-serif;
+}
+header nav h2 span {
+  background-color: #52babb;
+  opacity: 0.5;
+  border-radius: 100px 0 0 100px;
+  padding: 0.4em 1px 0.4em 1em;
+}
+header nav ul {
+  display: inline-flex;
+}
+header nav ul li {
+  align-items: flex-end;
+  margin-right: 1.5em;
+}
+header nav ul li i {
+  font-size: 0.9em;
+  margin-left: 0.3em;
+}
 
 main {
   padding-left: 14%;
@@ -72,4 +102,14 @@ footer {
 * body ul li {
   display: inline-flex;
   list-style: none;
+}
+* body button {
+  padding: 0.7em 1.7em;
+  border: none;
+  border-radius: 100px;
+  background: rgba(100, 100, 100, 0.5);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
 }

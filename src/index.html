@@ -32,7 +32,18 @@
         </div>
         <!-- header -->
         <header>
+            <nav>
+                <div class="nav-left">
+                    <h2><span>NEX</span>GEN</h2>
+                </div>
 
+                <div class="nav-right">
+                    <ul>
+                        <li v-for="page in nav.pages" v-html="page">{{ page }}</li>
+                    </ul>
+                    <button>BUY NEXGEN</button>
+                </div>
+            </nav>
         </header>
         <!-- main -->
         <main>

@@ -21,6 +21,19 @@
                 list-style: none;
             }
         }
+
+        button{
+            padding: .7em 1.7em;
+
+            border: none;
+            border-radius: 100px;
+            background: rgba(100, 100, 100, .5);
+            
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+        }
     }
 
 }

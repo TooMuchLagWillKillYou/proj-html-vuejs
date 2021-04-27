@@ -21,12 +21,14 @@ function initVue(){
                     '<i class="fab fa-linkedin-in"></i>'
                 ],
     
-                links: [
-                    'Demos',
-                    'Pages',
-                    'Portfolio',
-                    'Blog',
-                    'Shop'
+                pages: [
+                    'Demos <i class="fas fa-chevron-down"></i>',
+                    'Pages <i class="fas fa-chevron-down"></i>',
+                    'Portfolio <i class="fas fa-chevron-down"></i>',
+                    'Blog <i class="fas fa-chevron-down"></i>',
+                    'Shop',
+                    '<i class="fas fa-search"></i>',
+                    '<i class="fas fa-shopping-bag"></i>'
                 ],
             },
 
