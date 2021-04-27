@@ -7,11 +7,18 @@ function initVue(){
 
             nav: {
 
-                contacts: [
+                left: [
+
+                    '<i class="fas fa-clock"></i> Open Hours: Mon-Sat-9:00-18:00',
+                ],
+
+                right: [
                     
-                    'Open Hours: Mon-Sat-9:00-18:00',
-                    '+1 (305) 1234-5678',
-                    'hello@example.com'
+                    '<i class="fas fa-phone-alt"></i> +1 (305) 1234-5678',
+                    '<i class="fas fa-envelope"></i> hello@example.com',
+                    '<i class="fab fa-facebook-f"></i>',
+                    '<i class="fab fa-twitter"></i>',
+                    '<i class="fab fa-linkedin-in"></i>'
                 ],
     
                 links: [

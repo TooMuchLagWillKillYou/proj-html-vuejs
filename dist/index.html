@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Nexgen</title>
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +17,18 @@
         <!-- top-nav -->
         <div id="top-bar">
 
+            <div class="nav-left">
+                <ul>
+                    <li v-for="item in nav.left" v-html="item">{{ item }}</li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+
+                <ul>
+                    <li v-for="item in nav.right" v-html="item">{{ item }}</li>
+                </ul>
+            </div>
         </div>
         <!-- header -->
         <header>
@@ -63,8 +78,14 @@
         </footer>
 
         <div id="bottom-nav">
-            
+
         </div>
     </div>
 </body>
 </html>
+
+<!-- 
+    - trovare alternativa a Gilroy
+    - font-family: 'Inter', sans-serif;
+    - font-family: 'Montserrat', sans-serif;
+ -->

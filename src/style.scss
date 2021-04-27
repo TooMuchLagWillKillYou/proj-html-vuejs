@@ -1,9 +1,26 @@
 @import 'partials/variables';
 @import 'partials/homepage';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Montserrat:wght@500;600&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: inherit;
+
+    body{
+
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+
+        ul{
+    
+            li{
+    
+                display: inline-flex;
+                list-style: none;
+            }
+        }
+    }
+
 }
