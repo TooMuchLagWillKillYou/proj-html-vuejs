@@ -22,6 +22,27 @@
             }
         }
 
+        p{
+            padding: 0 2%;
+            font-size: 16px;
+            font-weight: 400;
+            color: $silverSand;
+        }
+
+        h2{
+            font-size: 48px;
+            font-weight: 800;
+            color: $shark; 
+        }
+
+        h4{
+            margin-bottom: 2em;
+            font-family: 'Montserrat', sans-serif;
+            font-style: 14px;
+            font-weight: 600;
+            color: $tradewind;
+        }
+
         button{
             padding: .7em 1.7em;
 
@@ -32,8 +53,20 @@
             font-family: "Montserrat", sans-serif;
             font-weight: 500;
             font-size: 16px;
-            color: white;
+            color: $silverSand;
         }
+
+        button.full{
+            color: white;
+            background-color: $blueLagoon;
+        }
+
+        button.empty{
+            color: white;
+            background-color: transparent;
+            border: 2px solid $blueLagoon;
+        }
+
     }
 
 }

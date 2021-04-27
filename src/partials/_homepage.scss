@@ -1,6 +1,6 @@
 @mixin horizontal-centering {
-    padding-left: 14%;
-    padding-right: 14%;
+    padding-left: 13%;
+    padding-right: 13%;
 }
 
 @mixin vertical-centering {
@@ -9,65 +9,76 @@
     align-items: center
 }
 
-#top-bar{
-
-    @include horizontal-centering;
-
-   @include vertical-centering;
-
-    padding-top: 1em;
-    padding-bottom: 1em;
-
-    font-size: 14px;
-    color: #7c8ea0;
-    background-image: linear-gradient( -45deg, #1b4965 0%, #0d1b2a 100%);
-
-    .nav-right{
-
-        ul{
-    
-            li{
-    
-                margin-left: 2em;
-    
-            }
-        }
-    }
-    
-    i{
-        margin-right: 1em;
-    }
-
+@mixin layover {
+    background-color: $woodsmoke;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
+
 
 header{
 
-    @include horizontal-centering;
-
-    // debug
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    background-color: $woodsmoke;
+    position: relative;
+    background-image: url('images/bg-2.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .layover{
+
+        @include layover;
+    }
+
+    #top-bar{
+    
+        @include horizontal-centering;
+        @include vertical-centering;
+    
+        position: relative;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    
+        font-size: 14px;
+        color: #7c8ea0;
+        background-image: linear-gradient( -45deg, #1b4965 0%, #0d1b2a 100%);
+    
+        .nav-right{
+    
+            ul{
+        
+                li{
+        
+                    margin-left: 2em;   
+                }
+            }
+        }
+        
+        i{
+            margin-right: 1em;
+        }
+    
+    }
 
     nav{
 
+        @include horizontal-centering;
         @include vertical-centering;
-        padding-top: 3%;
-        padding-bottom: 3%;
+
+        padding-top: 1%;
+        position: relative;
 
         font-size: 16px;
         font-weight: 500;
-        color: #7c8ea0;
+        color: #bec1ce;
 
-        h2{
-            font-family: "Montserrat", sans-serif;
-
-            span{
-
-                background-color: $fountainBlue;
-                opacity: .5;
-                border-radius: 100px 0 0 100px;
-                padding: .4em 1px .4em 1em;
-            }
+        img{
+            width: 130px;
         }
 
         ul{
@@ -84,7 +95,39 @@ header{
                 }
             }
         }
+
     }
+
+    .title{
+
+        width: 50%;
+        margin: auto;
+        position: relative;
+
+        text-align: center;
+
+        h1{
+            font-size: 72px;
+            font-weight: 900;
+            color: white
+        }
+
+        p{
+            margin: 4% 0 8%;
+            font-size: 19px;
+            line-height: 29px;
+        }
+
+        .buttons{
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 45%;
+        }
+        
+    }
+
+
 }
 
 main{
@@ -94,7 +137,7 @@ main{
     section{
 
         // debug
-        height: 200px;
+        // height: 200px;
     }
 
     #performance,
@@ -110,6 +153,46 @@ main{
 
     #news{
         background-color: $grayNurse;
+    }
+
+    #performance{
+
+        width: 80%;
+        margin: 0 auto;
+        padding: 8% 0;
+        text-align: center;
+        
+        p{
+            margin: 4% 0;
+        }
+
+        .video{
+
+            position: relative;
+            overflow: hidden;
+            border-radius: .5em;
+
+            img{
+                display: block;
+                max-width: 100%;
+            }
+
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                font-size: 100px;
+                color: white;
+                opacity: .7;
+            }
+
+            .layover{
+                
+                @include layover;
+            }
+        }
     }
 }
 

@@ -1,47 +1,55 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Montserrat:wght@500;600&display=swap);
-#top-bar {
-  padding-left: 14%;
-  padding-right: 14%;
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+  background-image: url("images/bg-2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+header .layover {
+  background-color: #111117;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+header #top-bar {
+  padding-left: 13%;
+  padding-right: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding-top: 1em;
   padding-bottom: 1em;
   font-size: 14px;
   color: #7c8ea0;
   background-image: linear-gradient(-45deg, #1b4965 0%, #0d1b2a 100%);
 }
-#top-bar .nav-right ul li {
+header #top-bar .nav-right ul li {
   margin-left: 2em;
 }
-#top-bar i {
+header #top-bar i {
   margin-right: 1em;
 }
-
-header {
-  padding-left: 14%;
-  padding-right: 14%;
-  height: 100vh;
-  background-color: #111117;
-}
 header nav {
+  padding-left: 13%;
+  padding-right: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 1%;
+  position: relative;
   font-size: 16px;
   font-weight: 500;
-  color: #7c8ea0;
+  color: #bec1ce;
 }
-header nav h2 {
-  font-family: "Montserrat", sans-serif;
-}
-header nav h2 span {
-  background-color: #52babb;
-  opacity: 0.5;
-  border-radius: 100px 0 0 100px;
-  padding: 0.4em 1px 0.4em 1em;
+header nav img {
+  width: 130px;
 }
 header nav ul {
   display: inline-flex;
@@ -54,13 +62,32 @@ header nav ul li i {
   font-size: 0.9em;
   margin-left: 0.3em;
 }
+header .title {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+header .title h1 {
+  font-size: 72px;
+  font-weight: 900;
+  color: white;
+}
+header .title p {
+  margin: 4% 0 8%;
+  font-size: 19px;
+  line-height: 29px;
+}
+header .title .buttons {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
 
 main {
-  padding-left: 14%;
-  padding-right: 14%;
-}
-main section {
-  height: 200px;
+  padding-left: 13%;
+  padding-right: 13%;
 }
 main #performance,
 main #team,
@@ -74,17 +101,53 @@ main #know-first {
 main #news {
   background-color: #e7eee9;
 }
+main #performance {
+  width: 80%;
+  margin: 0 auto;
+  padding: 8% 0;
+  text-align: center;
+}
+main #performance p {
+  margin: 4% 0;
+}
+main #performance .video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+main #performance .video img {
+  display: block;
+  max-width: 100%;
+}
+main #performance .video i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  color: white;
+  opacity: 0.7;
+}
+main #performance .video .layover {
+  background-color: #111117;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 footer {
-  padding-left: 14%;
-  padding-right: 14%;
+  padding-left: 13%;
+  padding-right: 13%;
   height: 200px;
   background-image: linear-gradient(45deg, #111117 0%, #0D1B2A 100%);
 }
 
 #bottom-nav {
-  padding-left: 14%;
-  padding-right: 14%;
+  padding-left: 13%;
+  padding-right: 13%;
   background-image: linear-gradient(45deg, #111117 0%, #0d1b2a 100%);
   height: 60px;
 }
@@ -103,6 +166,24 @@ footer {
   display: inline-flex;
   list-style: none;
 }
+* body p {
+  padding: 0 2%;
+  font-size: 16px;
+  font-weight: 400;
+  color: #8f93a5;
+}
+* body h2 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1d2528;
+}
+* body h4 {
+  margin-bottom: 2em;
+  font-family: "Montserrat", sans-serif;
+  font-style: 14px;
+  font-weight: 600;
+  color: #60a9ad;
+}
 * body button {
   padding: 0.7em 1.7em;
   border: none;
@@ -111,5 +192,14 @@ footer {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
+  color: #8f93a5;
+}
+* body button.full {
   color: white;
+  background-color: #048383;
+}
+* body button.empty {
+  color: white;
+  background-color: transparent;
+  border: 2px solid #048383;
 }

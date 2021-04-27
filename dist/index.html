@@ -14,27 +14,32 @@
 </head>
 <body>
     <div id="app">
-        <!-- top-nav -->
-        <div id="top-bar">
-
-            <div class="nav-left">
-                <ul>
-                    <li v-for="item in nav.left" v-html="item">{{ item }}</li>
-                </ul>
-            </div>
-
-            <div class="nav-right">
-
-                <ul>
-                    <li v-for="item in nav.right" v-html="item">{{ item }}</li>
-                </ul>
-            </div>
-        </div>
+        
         <!-- header -->
         <header>
+
+            <div class="layover"></div>
+
+            <!-- top-nav -->
+            <div id="top-bar">
+    
+                <div class="nav-left">
+                    <ul>
+                        <li v-for="item in nav.left" v-html="item">{{ item }}</li>
+                    </ul>
+                </div>
+    
+                <div class="nav-right">
+    
+                    <ul>
+                        <li v-for="item in nav.right" v-html="item">{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+            
             <nav>
                 <div class="nav-left">
-                    <h2><span>NEX</span>GEN</h2>
+                    <img src="images/logo.svg" alt="">
                 </div>
 
                 <div class="nav-right">
@@ -44,13 +49,31 @@
                     <button>BUY NEXGEN</button>
                 </div>
             </nav>
+
+            <div class="title">
+                <h1>Financial Risk</h1>
+                <p>The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
+                <div class="buttons">
+                    <button class="full">GET IN TOUCH</button>
+                    <button class="empty">READ MORE</button>
+                </div>
+            </div>
         </header>
+
         <!-- main -->
         <main>
 
             <!-- advisory performance -->
             <section id="performance">
+                <h4>INTRODUCTION VIDEO</h4>
+                <h2>Advisory performance</h2>
+                <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
 
+                <div class="video">
+                    <div class="layover"></div>
+                    <img src="images/video-1.jpg" alt="">
+                    <i class="fas fa-play"></i>
+                </div>
             </section>
 
             <!-- Results in number -->
@@ -84,6 +107,7 @@
             </section>
         </main>
 
+        <!-- footer -->
         <footer>
 
         </footer>
