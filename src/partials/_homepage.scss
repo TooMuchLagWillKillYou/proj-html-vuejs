@@ -10,8 +10,6 @@
 }
 
 @mixin layover {
-    background-color: $woodsmoke;
-    opacity: .5;
     position: absolute;
     top: 0;
     right: 0;
@@ -33,6 +31,8 @@ header{
     .layover{
 
         @include layover;
+        background-color: $woodsmoke;
+        opacity: .5;
     }
 
     #top-bar{
@@ -132,10 +132,9 @@ header{
 
 main{
 
-    @include horizontal-centering;
-
     section{
-
+        
+        @include horizontal-centering;
         // debug
         // height: 200px;
     }
@@ -191,6 +190,56 @@ main{
             .layover{
                 
                 @include layover;
+                background-color: $woodsmoke;
+                opacity: .5;
+            }
+        }
+    }
+
+    #results{
+
+        @include horizontal-centering;
+
+        position: relative;
+        text-align: center;
+        padding-top: 8%;
+        padding-bottom: 8%;
+        background-image: url('images/bg-4.jpg');
+
+        .layover{
+            @include layover;
+
+            background-color: transparent;
+            background-image: linear-gradient(90deg, #111117 0%, #0D1B2A 100%);
+            opacity: 0.9;
+        }
+
+        div{
+            
+            position: relative;
+
+            .title{
+                
+                h2{
+                    color: white;
+                }
+                
+                p{
+                    margin-top: 2em;
+                    margin-bottom: 4em;
+                }
+            }
+            
+            .numbers{
+                
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                margin: 0 auto;
+                
+                h2{
+                    color: $tradewind;
+                }
             }
         }
     }
