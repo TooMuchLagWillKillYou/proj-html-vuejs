@@ -17,12 +17,20 @@ function initVue() {
         pages: ['Demos <i class="fas fa-chevron-down"></i>', 'Pages <i class="fas fa-chevron-down"></i>', 'Portfolio <i class="fas fa-chevron-down"></i>', 'Blog <i class="fas fa-chevron-down"></i>', 'Shop', '<i class="fas fa-search"></i>', '<i class="fas fa-shopping-bag"></i>']
       },
       footer: {
-        company: ['Institutional', 'Social &amp; Events', 'Innovation', 'Enviroment', 'Technology'],
-        services: ['Audit &amp; Assurance', 'Financial Advisory', 'Analytics and M&amp;A', 'Middle Marketing', 'Legal Cosulting'],
-        consultants: ['David Cooper', 'Oliver Jones', 'Emma Lopez', 'T. Johnson', 'Jacob Hill Jr']
+        company: {
+          title: 'Company',
+          text: ['Institutional', 'Social &amp; Events', 'Innovation', 'Enviroment', 'Technology']
+        },
+        services: {
+          title: 'Services',
+          text: ['Audit &amp; Assurance', 'Financial Advisory', 'Analytics and M&amp;A', 'Middle Marketing', 'Legal Cosulting']
+        },
+        consultants: {
+          title: 'Consultants',
+          text: ['David Cooper', 'Oliver Jones', 'Emma Lopez', 'T. Johnson', 'Jacob Hill Jr']
+        }
       }
-    },
-    methods: {}
+    }
   });
 }
 

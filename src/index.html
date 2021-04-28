@@ -288,7 +288,36 @@
 
         <!-- footer -->
         <footer>
+            <div class="footer-left">
+                <img src="images/logo.svg" alt="">
+                <p>Built to the smallest detail with a focus on feature availability.</p>
 
+                <ul>
+                    <li>
+                        <i class="fas fa-phone-alt"></i> +1 (305) 1234-5678
+                    </li>
+                    
+                    <li>
+                        <i class="fas fa-envelope"></i> hello@example.com
+                    </li>
+
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i> Main Avenue, 987
+                    </li>
+                </ul>
+
+                <button class="empty">BUY NEXGEN</button>
+            </div>
+
+            <div class="footer-right">
+                <div class="card" v-for="card in footer">
+
+                    <h3 class="text-white">{{ card.title }}</h3>
+                    <ul>
+                        <li v-for="item in card.text" v-html="item"><a href="">{{ item }}</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
 
         <div id="bottom-nav">

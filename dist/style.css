@@ -255,8 +255,41 @@ main #team .grid .card .info .socials .circle {
 footer {
   padding-left: 13%;
   padding-right: 13%;
-  height: 200px;
+  display: flex;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  color: #8f93a5;
   background-image: linear-gradient(45deg, #111117 0%, #0D1B2A 100%);
+}
+footer img,
+footer p,
+footer li,
+footer button {
+  margin-top: 1.5em;
+}
+footer img {
+  width: 130px;
+}
+footer .footer-left {
+  width: 30%;
+  margin-right: 3em;
+}
+footer .footer-left i {
+  margin-right: 1em;
+}
+footer .footer-right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  width: 100%;
+}
+footer .footer-right .card {
+  padding: 2em;
+  background-color: #FFFFFF09;
+  border-radius: 10px 10px 10px 10px;
+}
+footer .footer-right .card ul li {
+  display: block;
 }
 
 #bottom-nav {

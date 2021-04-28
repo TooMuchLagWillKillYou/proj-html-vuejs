@@ -8,12 +8,10 @@ function initVue(){
             nav: {
 
                 left: [
-
                     '<i class="fas fa-clock"></i> Open Hours: Mon-Sat-9:00-18:00',
                 ],
 
-                right: [
-                    
+                right: [                  
                     '<i class="fas fa-phone-alt"></i> +1 (305) 1234-5678',
                     '<i class="fas fa-envelope"></i> hello@example.com',
                     '<i class="fab fa-facebook-f"></i>',
@@ -35,35 +33,50 @@ function initVue(){
 
             footer: {
 
-                company: [
-                    'Institutional',
-                    'Social &amp; Events',
-                    'Innovation',
-                    'Enviroment',
-                    'Technology'
-                ],
+                company: {
 
-                services: [
-                    'Audit &amp; Assurance',
-                    'Financial Advisory',
-                    'Analytics and M&amp;A',
-                    'Middle Marketing',
-                    'Legal Cosulting'
-                ],
+                    title: 'Company',
 
-                consultants: [
-                    'David Cooper',
-                    'Oliver Jones',
-                    'Emma Lopez',
-                    'T. Johnson',
-                    'Jacob Hill Jr'
-                ]
+                    text: [
+
+                        'Institutional',
+                        'Social &amp; Events',
+                        'Innovation',
+                        'Enviroment',
+                        'Technology'
+                    ]
+                },
+
+                services: {
+
+                    title: 'Services',
+
+                    text: [
+
+                        'Audit &amp; Assurance',
+                        'Financial Advisory',
+                        'Analytics and M&amp;A',
+                        'Middle Marketing',
+                        'Legal Cosulting'
+                    ]
+                },
+
+                consultants: {
+
+                    title: 'Consultants',
+
+                    text: [
+
+                        'David Cooper',
+                        'Oliver Jones',
+                        'Emma Lopez',
+                        'T. Johnson',
+                        'Jacob Hill Jr'
+                    ]
+                }
             }
         },
 
-        methods: {
-
-        }
     })
 }
 
