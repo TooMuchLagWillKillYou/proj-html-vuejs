@@ -97,9 +97,12 @@ main #news {
   background-color: #e7eee9;
 }
 main #performance {
+  padding-left: 13%;
+  padding-right: 13%;
   width: 80%;
   margin: 0 auto;
-  padding: 8% 0;
+  padding-top: 8%;
+  padding-bottom: 8%;
   text-align: center;
 }
 main #performance p {
@@ -192,18 +195,35 @@ main #services .grid {
 main #services .grid .card {
   padding: 10%;
   background-color: #FFFFFF09;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
 }
 main #services .grid .card img {
   max-width: 50px;
 }
-main #services .grid .card i {
+main #services .grid .card .circle {
   float: right;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 100%;
+}
+main #services .grid .card .circle i {
   font-size: 30px;
+  line-height: 40px;
   color: #60a9ad;
 }
 main #services .grid .card h3 {
   margin: 1em 0;
+}
+main #services .grid .card:hover {
+  transform: translateY(-5%);
+}
+main #services .grid .card:hover .circle {
+  background-color: #60a9ad;
+}
+main #services .grid .card:hover .circle i {
+  color: white;
 }
 main #team {
   padding-left: 13%;
@@ -456,14 +476,23 @@ footer .footer-right .card ul li {
   font-size: 16px;
   color: #8f93a5;
 }
+* body button:hover {
+  cursor: pointer;
+}
 * body button.full {
   color: white;
   background-color: #048383;
+}
+* body button.full:hover {
+  background-color: #52babb;
 }
 * body button.empty {
   color: white;
   background-color: transparent;
   border: 2px solid #048383;
+}
+* body button.empty:hover {
+  border: 2px solid #52babb;
 }
 * body .text-white {
   color: white;

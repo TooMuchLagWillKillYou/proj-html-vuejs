@@ -58,17 +58,30 @@
             font-weight: 500;
             font-size: 16px;
             color: $silverSand;
+
+            &:hover{
+                cursor: pointer;
+            }
         }
 
         button.full{
             color: white;
             background-color: $blueLagoon;
+
+            &:hover{
+                background-color: $fountainBlue;
+            }
         }
 
         button.empty{
             color: white;
             background-color: transparent;
             border: 2px solid $blueLagoon;
+
+            &:hover{
+                border: 2px solid $fountainBlue;
+
+            }
         }
 
         .text-white{
