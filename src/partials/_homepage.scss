@@ -376,11 +376,78 @@ main{
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            grid-gap: 3em;
+            margin-top: 3em;
 
             .card{
 
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+
+                text-align: center;
+
+                .layover{
+                    
+                    @include layover;
+                    background-color: $woodsmoke;
+                    opacity: .5;
+                }
+
                 img{
+                    display: block;
                     width: 100%;
+                }
+
+                .caption{
+
+                    display: flex;
+                    flex-direction: column;
+                    
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    
+                    padding: 2em;
+                    
+                    .card-top{
+                        display: none;
+                        justify-content: space-between;
+                        padding: 0 3em;
+
+                        color: $silverSand;
+
+                        i{
+                            margin-right: .6em;
+                        }
+                    }
+
+                    .card-bottom{
+
+                        margin-top: auto;
+
+                        h3{
+                            font-size: 1.7em;
+                        }
+
+                        p{
+                            display: none;
+                            margin-top: 1em;
+                        }
+                    }
+                    
+                    &:hover{
+
+                        .card-top{
+                            display: flex;
+                        }
+
+                        .card-bottom p{
+                            display: block;
+                        }
+                    }
                 }
             }
         }

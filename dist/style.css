@@ -278,9 +278,62 @@ main #news .title div p {
 main #news .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3em;
+  margin-top: 3em;
+}
+main #news .grid .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
+}
+main #news .grid .card .layover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #111117;
+  opacity: 0.5;
 }
 main #news .grid .card img {
+  display: block;
   width: 100%;
+}
+main #news .grid .card .caption {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+}
+main #news .grid .card .caption .card-top {
+  display: none;
+  justify-content: space-between;
+  padding: 0 3em;
+  color: #8f93a5;
+}
+main #news .grid .card .caption .card-top i {
+  margin-right: 0.6em;
+}
+main #news .grid .card .caption .card-bottom {
+  margin-top: auto;
+}
+main #news .grid .card .caption .card-bottom h3 {
+  font-size: 1.7em;
+}
+main #news .grid .card .caption .card-bottom p {
+  display: none;
+  margin-top: 1em;
+}
+main #news .grid .card .caption:hover .card-top {
+  display: flex;
+}
+main #news .grid .card .caption:hover .card-bottom p {
+  display: block;
 }
 main #know-first {
   display: flex;
