@@ -208,6 +208,49 @@ main #services .grid .card i {
 main #services .grid .card h3 {
   margin: 1em 0;
 }
+main #team {
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  text-align: center;
+}
+main #team .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4em;
+  margin-top: 3em;
+}
+main #team .grid .card {
+  display: flex;
+  text-align: left;
+}
+main #team .grid .card img {
+  max-height: 300px;
+  border-radius: 10px 0 10px 10px;
+}
+main #team .grid .card .info {
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10% 0;
+}
+main #team .grid .card .info p.job {
+  font-weight: 500;
+  text-decoration: underline;
+}
+main #team .grid .card .info .socials .circle {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #00A6A626;
+  font-size: 1.2em;
+  color: #60a9ad;
+  text-align: center;
+  line-height: 40px;
+}
 
 footer {
   padding-left: 13%;
@@ -238,7 +281,7 @@ footer {
   list-style: none;
 }
 * body p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   color: #8f93a5;
 }
@@ -248,7 +291,7 @@ footer {
   color: #1d2528;
 }
 * body h3 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
 }
 * body h4 {
