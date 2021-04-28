@@ -93,10 +93,6 @@ main #team,
 main #get-in-touch {
   background-color: white;
 }
-main #services,
-main #know-first {
-  background-image: linear-gradient(45deg, #111117 0%, #0D1B2A 100%);
-}
 main #news {
   background-color: #e7eee9;
 }
@@ -177,6 +173,7 @@ main #services {
   padding-right: 13%;
   padding-top: 8%;
   padding-bottom: 8%;
+  background-image: linear-gradient(45deg, #111117 0%, #0D1B2A 100%);
 }
 main #services .title div {
   display: flex;
@@ -224,21 +221,36 @@ main #team .grid {
 main #team .grid .card {
   display: flex;
   text-align: left;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 main #team .grid .card img {
   max-height: 300px;
   border-radius: 10px 0 10px 10px;
 }
 main #team .grid .card .info {
-  margin-left: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10% 0;
+  margin-left: 2em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-main #team .grid .card .info p.job {
+main #team .grid .card .info p {
+  width: 60%;
+}
+main #team .grid .card .info .job {
   font-weight: 500;
   text-decoration: underline;
+}
+main #team .grid .card .info .socials {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1em;
 }
 main #team .grid .card .info .socials .circle {
   display: inline-block;
@@ -250,6 +262,53 @@ main #team .grid .card .info .socials .circle {
   color: #60a9ad;
   text-align: center;
   line-height: 40px;
+}
+main #news {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+main #news .title div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+main #news .title div p {
+  width: 70%;
+}
+main #news .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main #news .grid .card img {
+  width: 100%;
+}
+main #know-first {
+  display: flex;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  background-image: linear-gradient(45deg, #111117 0%, #1B4965 100%);
+}
+main #know-first .title {
+  width: 40%;
+  margin-right: 2em;
+}
+main #know-first .title p {
+  margin-top: 2em;
+}
+main #know-first .form {
+  flex-grow: 1;
+  margin-right: 2em;
+}
+main #know-first .form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 1.5em;
+  color: #BEC1CE;
+  border: none;
+  border-radius: 5px;
+  background-color: #BEC1CE40;
+  opacity: 0.8;
 }
 
 footer {
