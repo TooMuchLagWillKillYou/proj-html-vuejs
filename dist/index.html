@@ -37,26 +37,30 @@
                 </div>
             </div>
             
-            <nav>
-                <div class="nav-left">
-                    <img src="images/logo.svg" alt="">
+            <div class="background-wrapper">
+
+                <nav>
+                    <div class="nav-left">
+                        <img src="images/logo.svg" alt="">
+                    </div>
+
+                    <div class="nav-right">
+                        <ul>
+                            <li v-for="page in nav.pages" v-html="page">{{ page }}</li>
+                        </ul>
+                        <button>BUY NEXGEN</button>
+                    </div>
+                </nav>
+                
+                <div class="title">
+                    <h1 class="text-white">Financial Risk</h1>
+                    <p class="text-gray">The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
+                    <div class="buttons">
+                        <button class="full">GET IN TOUCH</button>
+                        <button class="empty">READ MORE</button>
+                    </div>
                 </div>
 
-                <div class="nav-right">
-                    <ul>
-                        <li v-for="page in nav.pages" v-html="page">{{ page }}</li>
-                    </ul>
-                    <button>BUY NEXGEN</button>
-                </div>
-            </nav>
-
-            <div class="title">
-                <h1 class="text-white">Financial Risk</h1>
-                <p>The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
-                <div class="buttons">
-                    <button class="full">GET IN TOUCH</button>
-                    <button class="empty">READ MORE</button>
-                </div>
             </div>
         </header>
 
@@ -67,7 +71,7 @@
             <section id="performance">
                 <h4>INTRODUCTION VIDEO</h4>
                 <h2>Advisory performance</h2>
-                <p>Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
+                <p class="text-gray">Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making.</p>
 
                 <div class="video">
                     <div class="layover"></div>
@@ -84,7 +88,7 @@
 
                     <div class="title">
                         <h4>WHAT ARE WE DOING</h4>
-                        <h2 class="text-white">Results in numbers</h2>
+                        <h2 class="text-white">Results in Numbers</h2>
                         <p>Our goal is to exceed expectations by delivering the best job possible.</p>
                     </div>
                     
@@ -206,8 +210,8 @@
                         
                         <div class="info">
                             <h3>David Cooper</h3>
-                            <p class="job">CTO &amp; CO-FUNDER</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <p class="job text-gray">CTO &amp; CO-FUNDER</p>
+                            <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                             <div class="socials">
                                 <div class="circle">
@@ -230,8 +234,8 @@
                         
                         <div class="info">
                             <h3>Oliver Jones</h3>
-                            <p class="job">CHIEF PROCUREMENT</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <p class="job text-gray">CHIEF PROCUREMENT</p>
+                            <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                             <div class="socials">
                                 <div class="circle">
@@ -254,8 +258,8 @@
                         
                         <div class="info">
                             <h3>Emma Lopez</h3>
-                            <p class="job">CHIEF MARKETING</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <p class="job text-gray">CHIEF MARKETING</p>
+                            <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                             <div class="socials">
                                 <div class="circle">
@@ -278,8 +282,8 @@
                         
                         <div class="info">
                             <h3>T. Johnson</h3>
-                            <p class="job">CEO & PRESIDENT</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                            <p class="job text-gray">CEO & PRESIDENT</p>
+                            <p class="text-gray">Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
 
                             <div class="socials">
                                 <div class="circle">
@@ -307,7 +311,7 @@
                     <h2>Latest News</h2>
     
                     <div>
-                        <p>Every week we publish content about what is best in the business world.</p>
+                        <p class="text-gray">Every week we publish content about what is best in the business world.</p>
     
                         <button class="full">SEE ALL</button>
                     </div>
@@ -452,4 +456,6 @@
     - font-family: 'Inter', sans-serif;
     - font-family: 'Montserrat', sans-serif;
     - margini e padding in em;
+    - menu tendina
+    -check colori
  -->

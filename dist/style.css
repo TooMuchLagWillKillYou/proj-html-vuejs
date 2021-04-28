@@ -4,9 +4,6 @@ header {
   flex-direction: column;
   height: 100vh;
   position: relative;
-  background-image: url("images/bg-2.jpg");
-  background-position: center;
-  background-size: cover;
 }
 header .layover {
   position: absolute;
@@ -15,7 +12,7 @@ header .layover {
   bottom: 0;
   left: 0;
   background-color: #111117;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 header #top-bar {
   padding-left: 13%;
@@ -36,51 +33,62 @@ header #top-bar .nav-right ul li {
 header #top-bar i {
   margin-right: 1em;
 }
-header nav {
+header .background-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("images/bg-2.jpg");
+  background-position: center;
+  background-size: cover;
+  align-self: stretch;
+}
+header .background-wrapper nav {
   padding-left: 13%;
   padding-right: 13%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1%;
+  padding-top: 1em;
   position: relative;
   font-size: 16px;
   font-weight: 500;
   color: #bec1ce;
 }
-header nav img {
+header .background-wrapper nav img {
   width: 130px;
 }
-header nav ul {
+header .background-wrapper nav ul {
   display: inline-flex;
 }
-header nav ul li {
+header .background-wrapper nav ul li {
   align-items: flex-end;
   margin-right: 1.5em;
 }
-header nav ul li i {
+header .background-wrapper nav ul li i {
   font-size: 0.9em;
   margin-left: 0.3em;
 }
-header .title {
+header .background-wrapper .title {
   width: 50%;
   margin: auto;
   position: relative;
   text-align: center;
 }
-header .title h1 {
+header .background-wrapper .title h1 {
   font-size: 72px;
   font-weight: 900;
 }
-header .title p {
+header .background-wrapper .title p {
   margin: 4% 0 8%;
   padding: 0 2%;
+  font-size: 20px;
   line-height: 29px;
 }
-header .title .buttons {
-  margin: 0 auto;
+header .background-wrapper .title .buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
   width: 45%;
 }
 
@@ -99,10 +107,10 @@ main #news {
 main #performance {
   padding-left: 13%;
   padding-right: 13%;
-  width: 80%;
-  margin: 0 auto;
   padding-top: 8%;
   padding-bottom: 8%;
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
 }
 main #performance p {
@@ -123,9 +131,9 @@ main #performance .video i {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 100px;
+  font-size: 6em;
   color: white;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 main #performance .video .layover {
   position: absolute;
@@ -133,16 +141,23 @@ main #performance .video .layover {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #111117;
+  background-color: #21333E;
   opacity: 0.5;
+}
+main #performance .video:hover i {
+  font-size: 8em;
+  opacity: 1;
+}
+main #performance .video:hover .layover {
+  background-color: #1B4965;
 }
 main #results {
   padding-left: 13%;
   padding-right: 13%;
-  position: relative;
-  text-align: center;
   padding-top: 8%;
   padding-bottom: 8%;
+  position: relative;
+  text-align: center;
   background-image: url("images/bg-4.jpg");
 }
 main #results .layover {
@@ -169,7 +184,7 @@ main #results div .numbers {
   margin: 0 auto;
 }
 main #results div .numbers h2 {
-  color: #60a9ad;
+  color: #00A6A6;
 }
 main #services {
   padding-left: 13%;
@@ -211,7 +226,7 @@ main #services .grid .card .circle {
 main #services .grid .card .circle i {
   font-size: 30px;
   line-height: 40px;
-  color: #60a9ad;
+  color: #00A6A6;
 }
 main #services .grid .card h3 {
   margin: 1em 0;
@@ -220,7 +235,7 @@ main #services .grid .card:hover {
   transform: translateY(-5%);
 }
 main #services .grid .card:hover .circle {
-  background-color: #60a9ad;
+  background-color: #00A6A6;
 }
 main #services .grid .card:hover .circle i {
   color: white;
@@ -260,7 +275,7 @@ main #team .grid .card .info {
   width: fit-content;
 }
 main #team .grid .card .info p {
-  width: 60%;
+  margin-top: 0.5em;
 }
 main #team .grid .card .info .job {
   font-weight: 500;
@@ -279,7 +294,7 @@ main #team .grid .card .info .socials .circle {
   border-radius: 100%;
   background-color: #00A6A626;
   font-size: 1.2em;
-  color: #60a9ad;
+  color: #00A6A6;
   text-align: center;
   line-height: 40px;
 }
@@ -356,9 +371,9 @@ main #news .grid .card .caption:hover .card-bottom p {
   display: block;
 }
 main #know-first {
-  display: flex;
   padding-top: 8%;
   padding-bottom: 8%;
+  display: flex;
   background-image: linear-gradient(45deg, #111117 0%, #1B4965 100%);
 }
 main #know-first .title {
@@ -445,15 +460,10 @@ footer .footer-right .card ul li {
   display: inline-flex;
   list-style: none;
 }
-* body p {
-  font-size: 16px;
-  font-weight: 400;
-  color: #8f93a5;
-}
 * body h2 {
   font-size: 48px;
   font-weight: 800;
-  color: #1d2528;
+  color: #21333E;
 }
 * body h3 {
   font-size: 30px;
@@ -464,7 +474,13 @@ footer .footer-right .card ul li {
   font-family: "Montserrat", sans-serif;
   font-style: 14px;
   font-weight: 600;
-  color: #60a9ad;
+  color: #00A6A6;
+}
+* body p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #bec1ce;
 }
 * body button {
   padding: 0.7em 1.7em;
@@ -496,4 +512,7 @@ footer .footer-right .card ul li {
 }
 * body .text-white {
   color: white;
+}
+* body .text-gray {
+  color: #8f93a5;
 }

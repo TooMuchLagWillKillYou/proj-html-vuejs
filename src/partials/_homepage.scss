@@ -17,22 +17,24 @@
     left: 0;
 }
 
+@mixin vertical-padding{
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
 
 header{
 
     display: flex;
     flex-direction: column;
     height: 100vh;
+
     position: relative;
-    background-image: url('images/bg-2.jpg');
-    background-position: center;
-    background-size: cover;
 
     .layover{
 
         @include layover;
         background-color: $woodsmoke;
-        opacity: .5;
+        opacity: .6;
     }
 
     #top-bar{
@@ -52,8 +54,7 @@ header{
     
             ul{
         
-                li{
-        
+                li{       
                     margin-left: 2em;   
                 }
             }
@@ -65,65 +66,78 @@ header{
     
     }
 
-    nav{
+    .background-wrapper{
 
-        @include horizontal-centering;
-        @include vertical-centering;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
 
-        padding-top: 1%;
-        position: relative;
-
-        font-size: 16px;
-        font-weight: 500;
-        color: #bec1ce;
-
-        img{
-            width: 130px;
-        }
-
-        ul{
-
-            display: inline-flex;
-
-            li{
-                align-items: flex-end;
-                margin-right: 1.5em;
-
-                i{
-                    font-size: 0.9em;
-                    margin-left: .3em
+        background-image: url('images/bg-2.jpg');
+        background-position: center;
+        background-size: cover;
+        align-self: stretch;
+        
+        nav{
+    
+            @include horizontal-centering;
+            @include vertical-centering;
+    
+            padding-top: 1em;
+            position: relative;
+    
+            font-size: 16px;
+            font-weight: 500;
+            color: #bec1ce;
+    
+            img{
+                width: 130px;
+            }
+    
+            ul{
+    
+                display: inline-flex;
+    
+                li{
+                    align-items: flex-end;
+                    margin-right: 1.5em;
+    
+                    i{
+                        font-size: 0.9em;
+                        margin-left: .3em
+                    }
                 }
             }
+    
         }
-
-    }
-
-    .title{
-
-        width: 50%;
-        margin: auto;
-        position: relative;
-
-        text-align: center;
-
-        h1{
-            font-size: 72px;
-            font-weight: 900;
+    
+        .title{
+    
+            width: 50%;
+            margin: auto;
+            position: relative;
+    
+            text-align: center;
+    
+            h1{
+                font-size: 72px;
+                font-weight: 900;
+            }
+    
+            p{
+                margin: 4% 0 8%;
+                padding: 0 2%;
+                font-size: 20px;
+                line-height: 29px;
+            }
+    
+            .buttons{
+                @include vertical-centering;
+    
+                margin: 0 auto;
+                width: 45%;
+            }
+            
         }
-
-        p{
-            margin: 4% 0 8%;
-            padding: 0 2%;
-            line-height: 29px;
-        }
-
-        .buttons{
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            width: 45%;
-        }
-        
     }
 
 
@@ -149,11 +163,11 @@ main{
     #performance{
 
         @include horizontal-centering;
+        @include vertical-padding;
 
         width: 80%;
         margin: 0 auto;
-        padding-top: 8%;
-        padding-bottom: 8%;
+
         text-align: center;
         
         p{
@@ -178,16 +192,28 @@ main{
                 left: 50%;
                 transform: translate(-50%, -50%);
 
-                font-size: 100px;
+                font-size: 6em;
                 color: white;
-                opacity: .7;
+                opacity: .8;
             }
 
             .layover{
                 
                 @include layover;
-                background-color: $woodsmoke;
+                background-color: $shark;
                 opacity: .5;
+            }
+
+            &:hover{
+
+                i{
+                    font-size: 8em;
+                    opacity: 1;
+                }
+
+                .layover{
+                    background-color: #1B4965
+                }
             }
         }
     }
@@ -195,11 +221,10 @@ main{
     #results{
 
         @include horizontal-centering;
+        @include vertical-padding;
 
         position: relative;
         text-align: center;
-        padding-top: 8%;
-        padding-bottom: 8%;
         background-image: url('images/bg-4.jpg');
 
         .layover{
@@ -237,10 +262,10 @@ main{
     }
 
     #services{
+        
         @include horizontal-centering;
+        @include vertical-padding;
 
-        padding-top: 8%;
-        padding-bottom: 8%;
         background-image: linear-gradient(45deg, #111117 0%, #0D1B2A 100%);
         
         .title{
@@ -317,9 +342,8 @@ main{
     #team{
 
         @include horizontal-centering;
+        @include vertical-padding;
 
-        padding-top: 8%;
-        padding-bottom: 8%;
         text-align: center;
 
         .grid{
@@ -351,7 +375,7 @@ main{
 
 
                     p{
-                        width: 60%;
+                        margin-top: .5em;
                     }
 
                     .job{
@@ -385,8 +409,8 @@ main{
 
     #news{
 
-        padding-top: 8%;
-        padding-bottom: 8%;
+        @include vertical-padding;
+
 
         .title{
 
@@ -484,9 +508,10 @@ main{
     }
 
     #know-first{
+
+        @include vertical-padding;
+        
         display: flex;
-        padding-top: 8%;
-        padding-bottom: 8%;
         background-image: linear-gradient(45deg, #111117 0%, #1B4965 100%);
 
         .title{
