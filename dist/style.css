@@ -71,11 +71,10 @@ header .title {
 header .title h1 {
   font-size: 72px;
   font-weight: 900;
-  color: white;
 }
 header .title p {
   margin: 4% 0 8%;
-  font-size: 19px;
+  padding: 0 2%;
   line-height: 29px;
 }
 header .title .buttons {
@@ -109,6 +108,7 @@ main #performance {
 }
 main #performance p {
   margin: 4% 0;
+  padding: 0 2%;
 }
 main #performance .video {
   position: relative;
@@ -159,9 +159,6 @@ main #results .layover {
 main #results div {
   position: relative;
 }
-main #results div .title h2 {
-  color: white;
-}
 main #results div .title p {
   margin-top: 2em;
   margin-bottom: 4em;
@@ -174,6 +171,42 @@ main #results div .numbers {
 }
 main #results div .numbers h2 {
   color: #60a9ad;
+}
+main #services {
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+main #services .title div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+main #services .title div p {
+  width: 70%;
+}
+main #services .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3em;
+  margin-top: 3em;
+}
+main #services .grid .card {
+  padding: 10%;
+  background-color: #FFFFFF09;
+  border-radius: 10px 10px 10px 10px;
+}
+main #services .grid .card img {
+  max-width: 50px;
+}
+main #services .grid .card i {
+  float: right;
+  font-size: 30px;
+  color: #60a9ad;
+}
+main #services .grid .card h3 {
+  margin: 1em 0;
 }
 
 footer {
@@ -205,8 +238,7 @@ footer {
   list-style: none;
 }
 * body p {
-  padding: 0 2%;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   color: #8f93a5;
 }
@@ -214,6 +246,10 @@ footer {
   font-size: 48px;
   font-weight: 800;
   color: #1d2528;
+}
+* body h3 {
+  font-size: 35px;
+  font-weight: 700;
 }
 * body h4 {
   margin-bottom: 2em;
@@ -240,4 +276,7 @@ footer {
   color: white;
   background-color: transparent;
   border: 2px solid #048383;
+}
+* body .text-white {
+  color: white;
 }
