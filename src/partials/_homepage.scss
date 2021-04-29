@@ -2,13 +2,11 @@
     padding-left: 13%;
     padding-right: 13%;
 }
-
 @mixin vertical-centering {
     display: flex;
     justify-content: space-between;
     align-items: center
 }
-
 @mixin layover {
     position: absolute;
     top: 0;
@@ -16,10 +14,17 @@
     bottom: 0;
     left: 0;
 }
-
 @mixin vertical-padding{
     padding-top: 8%;
     padding-bottom: 8%;
+}
+
+@keyframes bg-scale {
+    0% {background-color: rgba($color: $tradewind, $alpha: 1.0); transform: scale(1)};
+    100% {background-color: rgba($color: $tradewind, $alpha: 0); transform: scale(1.5)};
+}
+@keyframes i-scale {
+    100% {transform: scale(.75)}
 }
 
 header{
@@ -161,21 +166,22 @@ main{
             position: relative;
             overflow: hidden;
             border-radius: .5em;
-
+            
             img{
                 display: block;
                 max-width: 100%;
             }
-
+            
             i{
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-
+                
                 font-size: 6em;
                 color: white;
                 opacity: .8;
+                transition: all ease-in-out .5s;
             }
 
             .layover{
@@ -183,12 +189,13 @@ main{
                 
                 background-color: $shark;
                 opacity: .5;
+                transition: all ease-in-out .5s;
             }
 
             &:hover{
 
                 i{
-                    font-size: 8em;
+                    font-size: 7em;
                     opacity: 1;
                 }
 
@@ -259,9 +266,10 @@ main{
                 padding: 2em;
                 background-color: #FFFFFF09;
                 border-radius: 10px;
+                transition: all ease-in-out .3s;
 
                 img{
-                    max-width: 50px;
+                    max-width: 40px;
                 }
 
                 .circle{                    
@@ -281,14 +289,18 @@ main{
                 }
 
                 &:hover{
-                    transform: translateY(-5%);
+                    transform: translateY(-4%);
 
                     .circle{
 
-                        background-color: $tradewind;
+                        // background-color: $tradewind;
+                        animation-name: bg-scale;
+                        animation-duration: 1s;
                         
                         i{
-                            color: white
+                            color: white;
+                            animation-name: i-scale;
+                            animation-duration: 1s
                         }
                     }
                 }
@@ -312,6 +324,7 @@ main{
                 display: flex;
                 text-align: left;
                 width: fit-content;
+                transition: all ease-in-out .3s;
 
                 img{
                     max-height: 300px;
@@ -345,8 +358,19 @@ main{
                             background-color: #00A6A626;
                             font-size: 1.2em;
                             color: $tradewind;
+                            transition: all ease-in-out .3s;
+
+                            &:hover{
+                                cursor: pointer;
+                                background-color: $tradewind;
+                                color: white;    
+                            }
                         }
                     }
+                }
+
+                &:hover{
+                    transform: translateY(-3%)
                 }
             }
         }
@@ -378,8 +402,8 @@ main{
                 .layover{
                     @include layover;
                     
-                    background-color: $woodsmoke;
-                    opacity: .5;
+                    background-color: #1B4965;
+                    opacity: .7;
                 }
 
                 img{
@@ -394,12 +418,15 @@ main{
                     flex-direction: column;
                     padding: 2em;
                     
-                    .card-top{
-                        display: none;
+                    .card-top{                        
                         justify-content: space-between;
                         padding: 0 3em;
-                        color: $silverSand;
 
+                        color: $silverSand;
+                        position: relative;
+                        bottom: 100px;
+                        transition: all ease-in-out .3s;
+                        
                         i{
                             margin-right: .6em;
                         }
@@ -407,13 +434,15 @@ main{
 
                     .card-bottom{
                         margin-top: auto;
+                        position: relative;
+                        top: 80px;
+                        transition: all ease-in-out .3s;
 
                         h3{
                             font-size: 1.7em;
                         }
 
                         p{
-                            display: none;
                             margin-top: 1em;
                         }
                     }
@@ -421,11 +450,11 @@ main{
                     &:hover{
 
                         .card-top{
-                            display: flex;
+                            bottom: 0;
                         }
 
-                        .card-bottom p{
-                            display: block;
+                        .card-bottom{
+                            top: 0
                         }
                     }
                 }
@@ -463,6 +492,11 @@ main{
                 border-radius: 5px;
                 background-color: #BEC1CE40;
                 opacity: 0.8;
+                transition: all ease-in-out .3s;
+
+                &:hover{
+                    opacity: 1
+                }
             }
         }
     }
@@ -502,14 +536,28 @@ footer{
             padding: 2em;
             background-color: #FFFFFF09;
             border-radius: 10px 10px 10px 10px;
+            transition: all ease-in-out .3s;
     
             ul{    
                 li{       
                     display: block;
                 }
             }
+
+            &:hover{
+                transform: translateY(-3%)
+            }
         }
 
+    }
+
+    li{
+        transition: all ease-in-out .3s;
+
+        &:hover{
+            cursor: pointer;
+            color: $tradewind;
+        }
     }
 
 }

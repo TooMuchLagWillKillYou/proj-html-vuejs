@@ -66,6 +66,7 @@
         button.full{
             color: white;
             background-color: $blueLagoon;
+            transition: all ease-in-out .2s;
 
             &:hover{
                 background-color: $fountainBlue;
@@ -76,8 +77,10 @@
             color: white;
             background-color: transparent;
             border: 2px solid $blueLagoon;
+            transition: all ease-in-out .2s;
 
             &:hover{
+                background-color: rgba($color: $woodsmoke, $alpha: .5);
                 border: 2px solid $fountainBlue;
             }
         }
