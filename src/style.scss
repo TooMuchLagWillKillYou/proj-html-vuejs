@@ -94,6 +94,25 @@
             color: $silverSand;
         }
 
+        .subtitle{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2em;
+        }
+
+        .grid-3{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .circle{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            text-align: center;
+            line-height: 40px;
+        }
+
     }
 
 }
