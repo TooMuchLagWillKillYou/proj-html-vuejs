@@ -112,6 +112,22 @@
             line-height: 40px;
         }
 
+        input{
+            
+            margin-bottom: 2em;
+            padding: 1.5em;
+            color: #BEC1CE;
+            border: none;
+            border-radius: 5px;
+            background-color: #BEC1CE40;
+            opacity: 0.8;
+            transition: all ease-in-out .3s;
+
+            &:hover{
+                opacity: 1
+            }
+        }
+
     }
 
 }

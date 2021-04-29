@@ -183,7 +183,6 @@ header{
             top: 50%;
             right: 0;
             transform: translateY(-50%);
-
             padding: 2em;
 
             div{
@@ -552,19 +551,79 @@ main{
             input{
                 display: block;
                 width: 100%;
-                margin-bottom: 2em;
-                padding: 1.5em;
+            }
+        }
+    }
 
-                color: #BEC1CE;
-                border: none;
-                border-radius: 5px;
-                background-color: #BEC1CE40;
-                opacity: 0.8;
-                transition: all ease-in-out .3s;
+    #get-in-touch{
+        @include vertical-padding;
+        
+        display: flex;
 
-                &:hover{
-                    opacity: 1
+        p{
+            margin-top: 1em;
+            width: 80%;
+        }
+
+        .title{
+
+            width: 70%;
+            
+            .form{
+
+                margin-top: 2em;
+                margin-right: 4em;
+
+                div{
+                    @include vertical-centering;
+
+                    input{
+                        flex-grow: 1;
+                    }   
+                    
                 }
+
+                input.message{
+                    width: 100%;
+                    height: 200px;
+                }
+            }
+        }
+
+        .contacts{
+
+            ul{
+                li{
+                    display: block;
+                    margin-top: 3em;
+                    color: $tradewind;
+                    
+                    .circle{
+                        display: inline-block;
+                        margin-right: 1em;
+                        background-color: #00A6A626;
+                        font-size: 1.2em;
+                        color: $tradewind;
+                        transition: all ease-in-out .3s;
+                    }
+
+                        
+                    &:hover{
+                        cursor: pointer;
+
+                        .circle{
+                            color: white;    
+                            background-color: $tradewind;
+                        }
+                    }
+                }
+            }
+
+            button.empty{
+                margin-top: 2em;
+                color: $tradewind;
+                border: none;
+                background-color: #00A6A626;
             }
         }
     }
@@ -616,7 +675,6 @@ footer{
                 transform: translateY(-3%)
             }
         }
-
     }
 
     li{
