@@ -23,37 +23,32 @@
 }
 
 header{
-
     display: flex;
     flex-direction: column;
     height: 100vh;
-
     position: relative;
 
     .layover{
-
         @include layover;
+
         background-color: $woodsmoke;
         opacity: .6;
     }
 
-    #top-bar{
-    
+    #top-bar{   
         @include horizontal-centering;
         @include vertical-centering;
     
         position: relative;
         padding-top: 1em;
-        padding-bottom: 1em;
-    
+        padding-bottom: 1em;    
         font-size: 14px;
         color: #7c8ea0;
         background-image: linear-gradient( -45deg, #1b4965 0%, #0d1b2a 100%);
     
         .nav-right{
     
-            ul{
-        
+            ul{        
                 li{       
                     margin-left: 2em;   
                 }
@@ -67,7 +62,6 @@ header{
     }
 
     .background-wrapper{
-
         display: flex;
         flex-direction: column;
         height: 100vh;
@@ -77,14 +71,12 @@ header{
         background-size: cover;
         align-self: stretch;
         
-        nav{
-    
+        nav{    
             @include horizontal-centering;
             @include vertical-centering;
     
             padding-top: 1em;
-            position: relative;
-    
+            position: relative;    
             font-size: 16px;
             font-weight: 500;
             color: #bec1ce;
@@ -93,8 +85,7 @@ header{
                 width: 130px;
             }
     
-            ul{
-    
+            ul{    
                 display: inline-flex;
     
                 li{
@@ -107,15 +98,12 @@ header{
                     }
                 }
             }
-    
         }
     
-        .title{
-    
+        .title{    
             width: 50%;
             margin: auto;
-            position: relative;
-    
+            position: relative;  
             text-align: center;
     
             h1{
@@ -130,23 +118,19 @@ header{
                 line-height: 29px;
             }
     
-            .buttons{
+            .buttons{                
                 @include vertical-centering;
-    
+
                 margin: 0 auto;
                 width: 45%;
-            }
-            
+            }            
         }
     }
-
-
 }
 
 main{
 
-    section{
-        
+    section{       
         @include horizontal-centering;
     }
 
@@ -161,13 +145,11 @@ main{
     }
 
     #performance{
-
         @include horizontal-centering;
         @include vertical-padding;
 
         width: 80%;
         margin: 0 auto;
-
         text-align: center;
         
         p{
@@ -176,7 +158,6 @@ main{
         }
 
         .video{
-
             position: relative;
             overflow: hidden;
             border-radius: .5em;
@@ -198,8 +179,8 @@ main{
             }
 
             .layover{
-                
                 @include layover;
+                
                 background-color: $shark;
                 opacity: .5;
             }
@@ -235,8 +216,7 @@ main{
             opacity: 0.9;
         }
 
-        div{
-            
+        div{            
             position: relative;
 
             .title{
@@ -248,7 +228,6 @@ main{
             }
             
             .numbers{
-
                 @include vertical-centering;
                 
                 width: 80%;
@@ -261,8 +240,7 @@ main{
         }
     }
 
-    #services{
-        
+    #services{        
         @include horizontal-centering;
         @include vertical-padding;
 
@@ -273,13 +251,11 @@ main{
             color: #8F93A5;
         }
 
-        .grid-3{
-            
+        .grid-3{            
             grid-gap: 2em;
             margin-top: 3em;
 
             .card{
-
                 padding: 2em;
                 background-color: #FFFFFF09;
                 border-radius: 10px;
@@ -288,8 +264,7 @@ main{
                     max-width: 50px;
                 }
 
-                .circle{
-                    
+                .circle{                    
                     float: right;
                     background-color: transparent;
 
@@ -306,7 +281,6 @@ main{
                 }
 
                 &:hover{
-
                     transform: translateY(-5%);
 
                     .circle{
@@ -317,28 +291,24 @@ main{
                             color: white
                         }
                     }
-
                 }
             }
         }
     }
 
     #team{
-
         @include horizontal-centering;
         @include vertical-padding;
 
         text-align: center;
 
         .grid{
-
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 4em;
             margin-top: 3em;
 
             .card{
-
                 display: flex;
                 text-align: left;
                 width: fit-content;
@@ -349,7 +319,6 @@ main{
                 }
 
                 .info{
-
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
@@ -367,16 +336,13 @@ main{
                         text-decoration: underline;
                     }
 
-                    .socials{
-                
+                    .socials{               
                         width: fit-content;
                         margin-top: 1em;
 
-                        .circle{
-                            
+                        .circle{                           
                             display: inline-block;
                             background-color: #00A6A626;
-
                             font-size: 1.2em;
                             color: $tradewind;
                         }
@@ -387,9 +353,7 @@ main{
     }
 
     #news{
-
         @include vertical-padding;
-
 
         .title{
 
@@ -402,21 +366,18 @@ main{
         }
 
         .grid-3{
-
             grid-gap: 3em;
             margin-top: 3em;
 
             .card{
-
                 position: relative;
                 overflow: hidden;
                 border-radius: 10px;
-
                 text-align: center;
 
                 .layover{
-                    
                     @include layover;
+                    
                     background-color: $woodsmoke;
                     opacity: .5;
                 }
@@ -427,7 +388,6 @@ main{
                 }
 
                 .caption{
-
                     @include layover;
 
                     display: flex;
@@ -435,11 +395,9 @@ main{
                     padding: 2em;
                     
                     .card-top{
-                        
                         display: none;
                         justify-content: space-between;
                         padding: 0 3em;
-
                         color: $silverSand;
 
                         i{
@@ -448,7 +406,6 @@ main{
                     }
 
                     .card-bottom{
-
                         margin-top: auto;
 
                         h3{
@@ -477,7 +434,6 @@ main{
     }
 
     #know-first{
-
         @include vertical-padding;
         
         display: flex;
@@ -493,12 +449,10 @@ main{
         }
 
         .form{
-
             flex-grow: 1;
             margin-right: 2em;
 
             input{
-
                 display: block;
                 width: 100%;
                 margin-bottom: 2em;
@@ -515,12 +469,10 @@ main{
 }
 
 footer{
-
     @include horizontal-centering;
     @include vertical-padding;
 
     display: flex;
-
     color: $silverSand;
     background-image: linear-gradient(45deg, #111117 0%, #0D1B2A 100%);
 
@@ -534,7 +486,6 @@ footer{
     }
 
     .footer-left{
-
         width: 30%;
         margin-right: 3em;
 
@@ -544,18 +495,15 @@ footer{
     }
 
     .footer-right.grid-3{
-
         grid-gap: 2em;
         width: 100%;
 
         .card{
-
             padding: 2em;
             background-color: #FFFFFF09;
             border-radius: 10px 10px 10px 10px;
     
-            ul{
-    
+            ul{    
                 li{       
                     display: block;
                 }
@@ -566,8 +514,7 @@ footer{
 
 }
 
-#bottom-nav{
-    
+#bottom-nav{    
     @include horizontal-centering;
 
     background-image: linear-gradient(45deg, #111117 0%, #0d1b2a 100%);
