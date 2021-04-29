@@ -67,10 +67,6 @@ header .background-wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url("images/bg-2.jpg");
-  background-position: center;
-  background-size: cover;
-  align-self: stretch;
 }
 header .background-wrapper nav {
   padding-left: 13%;
@@ -94,6 +90,7 @@ header .background-wrapper nav .nav-right ul {
 header .background-wrapper nav .nav-right ul li {
   align-items: flex-end;
   margin-right: 1.5em;
+  transition: all ease-in-out 0.3s;
 }
 header .background-wrapper nav .nav-right ul li i {
   font-size: 0.9em;
@@ -124,6 +121,7 @@ header .background-wrapper nav .nav-right ul li:hover ul.menu {
   display: block;
 }
 header .background-wrapper .title {
+  display: none;
   width: 50%;
   margin: auto;
   position: relative;
@@ -145,6 +143,34 @@ header .background-wrapper .title .buttons {
   align-items: center;
   margin: 0 auto;
   width: 45%;
+}
+header .background-wrapper .active {
+  display: block;
+}
+header .background-wrapper .img-wrapper {
+  display: flex;
+  position: absolute;
+  z-index: -1;
+}
+header .background-wrapper .img-wrapper .bg-image {
+  max-width: 100%;
+}
+header .background-wrapper .index {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 2em;
+}
+header .background-wrapper .index div {
+  width: 10px;
+  height: 40px;
+  margin-top: 0.5em;
+  border-radius: 10px;
+  background-color: #8f93a5;
+}
+header .background-wrapper .index .active-index {
+  background-color: #00A6A6;
 }
 
 main section {
@@ -511,8 +537,24 @@ footer li:hover {
 #bottom-nav {
   padding-left: 13%;
   padding-right: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #7c8ea0;
   background-image: linear-gradient(45deg, #111117 0%, #0d1b2a 100%);
-  height: 60px;
+}
+#bottom-nav p {
+  color: #7c8ea0;
+}
+#bottom-nav i {
+  margin-left: 2em;
+}
+#bottom-nav p:hover,
+#bottom-nav i:hover {
+  cursor: pointer;
+  color: #00A6A6;
 }
 
 * {

@@ -17,7 +17,7 @@
         
         <!-- header -->
         <header>
-            <div class="layover"></div>
+            <!-- <div class="layover"></div> -->
 
             <!-- top-nav -->
             <div id="top-bar">  
@@ -55,7 +55,7 @@
                     </div>
                 </nav>
                 
-                <div class="title">
+                <!-- <div class="title">
                     <h1 class="text-white">Financial Risk</h1>
                     <p class="text-gray">The right outcomes depend on continuous rigor in governance, models, and processes across the finance function.</p>
                     
@@ -63,6 +63,26 @@
                         <button class="full">GET IN TOUCH</button>
                         <button class="empty">READ MORE</button>
                     </div>
+                </div> -->
+
+                <div class="img-wrapper">
+                    <div class="layover"></div>
+
+                    <img :src="header.images[activeIndex]" alt="" class="bg-image">
+                </div>
+
+                <div class="title" :class="index == activeIndex ? 'active' : ''" v-for="(slide, index) in header.slider">
+                    <h1 class="text-white">{{ slide.h1 }}</h1>
+                    <p class="text-gray">{{ slide.p }}</p>
+                    
+                    <div class="buttons">
+                        <button class="full">GET IN TOUCH</button>
+                        <button class="empty">READ MORE</button>
+                    </div>
+                </div>
+
+                <div class="index">
+                    <div v-for="(slide, i) in header.slider" :class="i == activeIndex ? 'active-index' : ''"></div>
                 </div>
             </div>
         </header>
@@ -415,7 +435,15 @@
         </footer>
 
         <div id="bottom-nav">
+            <div class="nav-left">
+                <p>© 2021 NEXGEN is Proudly Powered by Codings.</p>
+            </div>
 
+            <div class="nav-right">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin-in"></i>
+            </div>
         </div>
     </div>
 </body>
@@ -424,6 +452,5 @@
 <!-- 
     - trovare alternativa a Gilroy;
     - margini e padding in em;
-    - menu tendina
     - check colori
  -->
