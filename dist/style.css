@@ -87,16 +87,41 @@ header .background-wrapper nav {
 header .background-wrapper nav img {
   width: 130px;
 }
-header .background-wrapper nav ul {
+header .background-wrapper nav .nav-right ul {
   display: inline-flex;
+  position: relative;
 }
-header .background-wrapper nav ul li {
+header .background-wrapper nav .nav-right ul li {
   align-items: flex-end;
   margin-right: 1.5em;
 }
-header .background-wrapper nav ul li i {
+header .background-wrapper nav .nav-right ul li i {
   font-size: 0.9em;
   margin-left: 0.3em;
+}
+header .background-wrapper nav .nav-right ul li ul.menu {
+  display: none;
+  padding: 1em 1.2em;
+  background-color: white;
+  border-radius: 0 5px 5px 0;
+  z-index: 900;
+  position: absolute;
+  top: 30px;
+}
+header .background-wrapper nav .nav-right ul li ul.menu li {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 1em;
+}
+header .background-wrapper nav .nav-right ul li ul.menu li:last-child {
+  margin-bottom: 0;
+}
+header .background-wrapper nav .nav-right ul li:hover {
+  cursor: pointer;
+  color: #00A6A6;
+}
+header .background-wrapper nav .nav-right ul li:hover ul.menu {
+  display: block;
 }
 header .background-wrapper .title {
   width: 50%;
@@ -130,9 +155,6 @@ main #performance,
 main #team,
 main #get-in-touch {
   background-color: white;
-}
-main #news {
-  background-color: #e7eee9;
 }
 main #performance {
   padding-left: 13%;
@@ -337,6 +359,7 @@ main #team .grid .card:hover {
 main #news {
   padding-top: 8%;
   padding-bottom: 8%;
+  background-color: #f1f1f1;
 }
 main #news .title div p {
   width: 70%;
@@ -375,9 +398,11 @@ main #news .grid-3 .card .caption {
   padding: 2em;
 }
 main #news .grid-3 .card .caption .card-top {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 3em;
-  color: #8f93a5;
+  color: #bec1ce;
   position: relative;
   bottom: 100px;
   transition: all ease-in-out 0.3s;

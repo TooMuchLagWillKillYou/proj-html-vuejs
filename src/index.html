@@ -42,7 +42,14 @@
 
                     <div class="nav-right">
                         <ul>
-                            <li v-for="page in nav.pages" v-html="page">{{ page }}</li>
+                            <li v-for="page in nav.pages" >
+                                <span v-html="page.link">{{ page.link }}</span>
+                                <ul v-if="page.menu" class="menu text-gray">
+                                    <li v-for="item in page.menu">
+                                        {{ item }}
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                         <button>BUY NEXGEN</button>
                     </div>
@@ -371,9 +378,9 @@
             </section>
 
             <!-- Get in toch -->
-            <section id="get-in-touch">
+            <!-- <section id="get-in-touch">
 
-            </section>
+            </section> -->
         </main>
 
         <!-- footer -->
@@ -416,9 +423,7 @@
 
 <!-- 
     - trovare alternativa a Gilroy;
-    - font-family: 'Inter', sans-serif;
-    - font-family: 'Montserrat', sans-serif;
     - margini e padding in em;
     - menu tendina
-    -check colori
+    - check colori
  -->

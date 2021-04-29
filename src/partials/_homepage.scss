@@ -89,18 +89,54 @@ header{
             img{
                 width: 130px;
             }
+
+            .nav-right{
+                
+                ul{    
+                    display: inline-flex;
+                    position: relative;
+                    
+                    li{
+                        align-items: flex-end;
+                        margin-right: 1.5em;
+                        
+                        i{
+                            font-size: 0.9em;
+                            margin-left: .3em
+                        }
+
+                        ul.menu{
+                            display: none;
+                            padding: 1em 1.2em;
+                            background-color: white;
+                            border-radius: 0 5px 5px 0;
     
-            ul{    
-                display: inline-flex;
+                            z-index: 900;
+                            position: absolute;
+                            top: 30px;
     
-                li{
-                    align-items: flex-end;
-                    margin-right: 1.5em;
+                            li{
+                                display: block;
+                                margin-right: 0;
+                                margin-bottom: 1em;
     
-                    i{
-                        font-size: 0.9em;
-                        margin-left: .3em
+                                &:last-child{
+                                    margin-bottom: 0;
+    
+                                }
+                            }
+                        }
+    
+                        &:hover{
+                            cursor: pointer;
+                            color: $tradewind;
+    
+                            ul.menu{
+                                display: block;
+                            }
+                        }
                     }
+
                 }
             }
         }
@@ -143,10 +179,6 @@ main{
     #team,
     #get-in-touch{
         background-color: white;
-    }
-
-    #news{
-        background-color: $grayNurse;
     }
 
     #performance{
@@ -379,6 +411,8 @@ main{
     #news{
         @include vertical-padding;
 
+        background-color: #f1f1f1;
+
         .title{
 
             div{
@@ -419,10 +453,10 @@ main{
                     padding: 2em;
                     
                     .card-top{                        
-                        justify-content: space-between;
+                        @include vertical-centering;
+                        
                         padding: 0 3em;
-
-                        color: $silverSand;
+                        color: #bec1ce;
                         position: relative;
                         bottom: 100px;
                         transition: all ease-in-out .3s;

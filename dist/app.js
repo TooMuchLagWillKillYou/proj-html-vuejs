@@ -14,7 +14,34 @@ function initVue() {
       nav: {
         left: ['<i class="fas fa-clock"></i> Open Hours: Mon-Sat-9:00-18:00'],
         right: ['<i class="fas fa-phone-alt"></i> +1 (305) 1234-5678', '<i class="fas fa-envelope"></i> hello@example.com', '<i class="fab fa-facebook-f"></i>', '<i class="fab fa-twitter"></i>', '<i class="fab fa-linkedin-in"></i>'],
-        pages: ['Demos <i class="fas fa-chevron-down"></i>', 'Pages <i class="fas fa-chevron-down"></i>', 'Portfolio <i class="fas fa-chevron-down"></i>', 'Blog <i class="fas fa-chevron-down"></i>', 'Shop', '<i class="fas fa-search"></i>', '<i class="fas fa-shopping-bag"></i>']
+        // pages: [
+        //     'Demos <i class="fas fa-chevron-down"></i>',
+        //     'Pages <i class="fas fa-chevron-down"></i>',
+        //     'Portfolio <i class="fas fa-chevron-down"></i>',
+        //     'Blog <i class="fas fa-chevron-down"></i>',
+        //     'Shop',
+        //     '<i class="fas fa-search"></i>',
+        //     '<i class="fas fa-shopping-bag"></i>'
+        // ],
+        pages: [{
+          link: 'Demos <i class="fas fa-chevron-down"></i>',
+          menu: ['Home 1', 'Home 2', 'Home 3']
+        }, {
+          link: 'Pages <i class="fas fa-chevron-down"></i>',
+          menu: ['About Us', 'Services', 'Single Service', 'Pricing Table', 'Testimonials', 'Team', 'Partners', 'Contact Us']
+        }, {
+          link: 'Portfolio <i class="fas fa-chevron-down"></i>',
+          menu: ['Full Width', 'With Sidebar', 'Single Portfolio']
+        }, {
+          link: 'Blog <i class="fas fa-chevron-down"></i>',
+          menu: ['Full Width', 'With Sidebar', 'Single Portfolio']
+        }, {
+          link: 'Shop'
+        }, {
+          link: '<i class="fas fa-search"></i>'
+        }, {
+          link: '<i class="fas fa-shopping-bag"></i>'
+        }]
       },
       footer: {
         company: {
